@@ -104,6 +104,10 @@
                 writeln("  text       to make text files");
                 writeln("  linkcheck  to check all external links for integrity");
             break;
+
+            case 'gettext':
+                command("$SPHINXBUILD -b gettext $ALLSPHINXOPTS $SOURCEDIR/en $BUILDDIR/en/pot");
+            break;
         }
     } catch (Exception $e) {
         writeln('Error: ' . $e->getMessage());
